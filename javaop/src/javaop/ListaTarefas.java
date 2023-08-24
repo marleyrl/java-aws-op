@@ -37,7 +37,7 @@ public class ListaTarefas {
 	
 	public static void main (String [] args){
 		ListaTarefas listaTarefas = new ListaTarefas();
-		
+		/*
 		listaTarefas.adicionarTarefa("Fazer Cafe");
 		listaTarefas.adicionarTarefa("Lavar Carro");
 		
@@ -50,6 +50,6 @@ public class ListaTarefas {
 		
 		listaTarefas.obterDescricoesTarefas();
 		
-		System.out.println("Tarefa Acima");
+		System.out.println("Tarefa Acima");*/
 	}
 }	
