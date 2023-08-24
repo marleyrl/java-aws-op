@@ -1,5 +1,6 @@
 package javaop;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,22 +19,25 @@ public class CarrinhoDeCompras {
 	
 	public void removerItem(String nome) {
 		
-	}
-	public Item calcularValorTotal() {
-		
-		
-		for(Item valores:carrinhocompras) {
-			
-			int    qnt;
-			double valorTotal;
-			valorTotal = valores.getPreco();
-			qnt= valores.getQuantidade();
-			
+		List<Item> removeItem= new ArrayList<>();
+		for(Item i: carrinhocompras) {
+			if(i.getNome().equalsIgnoreCase(nome)==true) {
+				removeItem.add(i);
+			}
 		}
+		carrinhocompras.removeAll(removeItem);
+	}
+	public String calcularValorTotal() {
 		
-		return carrinhocompras.get(1);
+		double somafinal=0;
+		DecimalFormat decimalFormat = new DecimalFormat("0.00");
 		
-		
+		for(Item item:carrinhocompras) {
+	
+			somafinal+= item.getPreco()*item.getQuantidade();
+	
+		}
+		return decimalFormat.format(somafinal);	
 		
 	}
 	public void exibirItens() {
@@ -54,10 +58,12 @@ public class CarrinhoDeCompras {
 		compras.adicionarItem("Agua", 3.5, 20);
 		
 		compras.exibirItens();
+		System.out.println("Itens Adicionados, valor do Carrinho Atualizado: "+ compras.calcularValorTotal()+"\n");
+		compras.removerItem("Queijo");
 		
-		compras.calcularValorTotal();
-		
-
+		System.out.println("Item Removido, valor do Carrinho Atualizado: "+ compras.calcularValorTotal()+"\n");
+		compras.exibirItens();
+	
 	
 	}
 
