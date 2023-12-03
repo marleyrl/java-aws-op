@@ -55,7 +55,7 @@ public class CarrinhoDeCompras {
 		compras.adicionarItem("Pao", 12.8, 2);
 		compras.adicionarItem("Bolo", 12.8, 4);
 		compras.adicionarItem("Sal", 12.8, 1);
-		compras.adicionarItem("Agua", 3.5, 20);
+		compras.adicionarItem("Água", 3.5, 20);
 		
 		compras.exibirItens();
 		System.out.println("Itens Adicionados, valor do Carrinho Atualizado: "+ compras.calcularValorTotal()+"\n");
