@@ -1,4 +1,4 @@
-package javaop;
+package javaop.CarrinhoCompras.ListaTarefas;
 
 import java.util.ArrayList;
 import java.util.List;
