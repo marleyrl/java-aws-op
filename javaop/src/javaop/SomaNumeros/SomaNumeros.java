@@ -26,10 +26,30 @@ public class SomaNumeros{
 	
 	}
 	public int encontrarMaiorNumero() {
-		return encontrarMaiorNumero();
+		
+	int valormenor = somanumeros.get(0).getNumero();
+		
+		for(Numeros numeros:somanumeros) {
+			int numero = numeros.getNumero();
+		if(numero > valormenor) {
+			valormenor = numero;
+		 }
 	}
+		
+		return valormenor;
+	}
+
 	public int encontrarMenorNumero() { 
-		return encontrarMaiorNumero();
+		int valormenor = somanumeros.get(0).getNumero();
+		
+		for(Numeros numeros:somanumeros) {
+			int numero = numeros.getNumero();
+		if(numero <valormenor) {
+			valormenor = numero;
+		 }
+	}
+		
+		return valormenor;
 	}
 	public void exibirNumeros() {
 		
@@ -46,9 +66,16 @@ public class SomaNumeros{
 
 		objnumero.adicionarNumero(3);
 		objnumero.adicionarNumero(35);
-		objnumero.adicionarNumero(53);
+		objnumero.adicionarNumero(476);
+		objnumero.adicionarNumero(59);
+		objnumero.adicionarNumero(41);
+		objnumero.adicionarNumero(583);
+		
 		objnumero.exibirNumeros();
 		objnumero.calcularSoma();
+		
+		System.out.println("Menor Numero " + objnumero.encontrarMenorNumero());
+		System.out.println("Maior Numero " + objnumero.encontrarMaiorNumero());
 
 	}
 }	
