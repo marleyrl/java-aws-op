@@ -1,4 +1,4 @@
-package javaop.SomaNumeros;
+package SomaNumeros;
 
 public class Numeros {
 

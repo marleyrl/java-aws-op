@@ -1,4 +1,4 @@
-package javaop.CarrinhoCompras;
+package CarrinhoCompras;
 
 public class Item{
 	

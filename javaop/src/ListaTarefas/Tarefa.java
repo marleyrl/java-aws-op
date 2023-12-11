@@ -1,4 +1,4 @@
-package javaop.CarrinhoCompras.ListaTarefas;
+package ListaTarefas;
 
 public class Tarefa {
 

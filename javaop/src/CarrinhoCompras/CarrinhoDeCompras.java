@@ -1,4 +1,4 @@
-package javaop.CarrinhoCompras;
+package CarrinhoCompras;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
